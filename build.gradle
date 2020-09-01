@@ -3,9 +3,10 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.1.0'
+        classpath 'com.android.tools.build:gradle:4.1.0-rc02'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,13 +25,13 @@ allprojects {
         // Android config
         androidBuildToolsVersion = '22.0.1'
         androidMinSdkVersion = 14
-        androidTargetSdkVersion = 22
-        androidCompileSdkVersion = 22
+        androidTargetSdkVersion = 29
+        androidCompileSdkVersion = 29
         androidVersionCode = VERSION_CODE.toInteger()
         androidVersionName = VERSION_NAME
 
         // Libraries
-        libAppcompat = 'com.android.support:appcompat-v7:22.0.0'
+        libAppcompat = "androidx.appcompat:appcompat:1.2.0"
         libJunit = 'junit:junit:4.12'
         libRobolectric = 'org.robolectric:robolectric:2.4'
         libMockito = 'org.mockito:mockito-core:1.10.19'
@@ -38,5 +39,6 @@ allprojects {
 
     repositories {
         jcenter()
+        google()
     }
 }

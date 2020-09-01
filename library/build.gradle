@@ -31,14 +31,14 @@ android {
 }
 
 dependencies {
-    androidTestCompile parent.ext.libJunit
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile parent.ext.libAppcompat
-    androidTestCompile (parent.ext.libRobolectric) {
+    androidTestImplementation parent.ext.libJunit
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api parent.ext.libAppcompat
+    androidTestImplementation (parent.ext.libRobolectric) {
         exclude module: 'commons-logging'
         exclude module: 'httpclient'
     }
-    androidTestCompile parent.ext.libMockito
+    androidTestImplementation parent.ext.libMockito
 }
 
 apply from: '../maven_push.gradle'

@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion parent.ext.androidCompileSdkVersion
-    buildToolsVersion parent.ext.androidBuildToolsVersion
 
     defaultConfig {
         minSdkVersion parent.ext.androidMinSdkVersion
@@ -31,7 +30,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile parent.ext.libAppcompat
-    compile project(':library')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation parent.ext.libAppcompat
+    implementation project(':library')
 }
